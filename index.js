@@ -1,17 +1,17 @@
 //Modules and Globals
-
-// Require needed modules.
+require('dotenv').config()
 const express = require('express')
-
 // Initialize the app object.
 const app = express()
 
-// Create a homepage route.
+app.use(express.json());
+
 app.get('/', function (req, res) {
-    // This gets sent to the client
-    // (your web browser most likely!)
-    res.send('Hello world')
-})
+    res.send('Hello world');
+});
+
+//Controllers and routes
+app.use('/books', require('./controllers/books.js'))
 
 
 

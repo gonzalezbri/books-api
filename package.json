@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/gonzalezbri/books-api#readme",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-react-views": "^0.11.0"
+    "express-react-views": "^0.11.0",
+    "mongoose": "^7.1.1",
+    "react": "^18.2.0"
   }
 }
