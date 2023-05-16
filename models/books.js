@@ -1,8 +1,6 @@
 // Module
 const mongoose = require('mongoose')
-
-//initialize app object
-const app = express();
+const { Schema } = mongoose
 
 //Schema
 const bookSchema = new mongoose.Schema({
@@ -13,4 +11,5 @@ const bookSchema = new mongoose.Schema({
     imageURL:{type:String,required:true},
 });
 
-module.exports = mongoose.model('Books', bookSchema);
+const Book = mongoose.model('Book', bookSchema);
+module.exports = Book
